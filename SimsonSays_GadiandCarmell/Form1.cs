@@ -15,10 +15,13 @@ namespace SimsonSays_GadiandCarmell
     {
         private PictureBox[] PictureBoxArr = new PictureBox[4];
         Random rnd = new Random();
-        private int[] order = new int[4];
-        private int count = 3;
-        private int x = -1;
-        private int y = 0;
+        private int[] order = new int[10];
+        private int countlevel = 4;
+        private int countcomp = -1;
+        private int countflash = 0;
+        private int countclicks = 0;
+        private bool iswrong = false;
+        private int k;
        
         public Form1()
         {
@@ -28,10 +31,10 @@ namespace SimsonSays_GadiandCarmell
 
         public void SetArr()
         {
-            PictureBoxArr[0] = pictureBox1;
-            PictureBoxArr[1] = pictureBox2;
-            PictureBoxArr[2] = pictureBox3;
-            PictureBoxArr[3] = pictureBox4;
+            PictureBoxArr[0] = pictureBox0;
+            PictureBoxArr[1] = pictureBox1;
+            PictureBoxArr[2] = pictureBox2;
+            PictureBoxArr[3] = pictureBox3;
 
             for (int i = 0; i < order.Length; i++)
             {
@@ -39,48 +42,95 @@ namespace SimsonSays_GadiandCarmell
             }
         }
 
-       
+        private void Start_Click(object sender, EventArgs e)
+        {
+
+            countcomp = -1;
+            timer1.Start();
+        }
+
+
         private void pictureBox_Click(object sender, EventArgs e)
         {
+
+            PictureBox pictureBox = sender as PictureBox;
+
+            countclicks++;
+
+            string picName = pictureBox.Name;
+            k = int.Parse(picName.Substring(picName.Length - 1));
+
+            countflash = 0;
+            timer3.Start();
+
+            if (countclicks<=countlevel)
+            {
+                if (k != order[countclicks])
+                {
+                    iswrong = true;
+                    MessageBox.Show("אתה כשלון");
+                }
+            }
+
+            else
+            {
+                countclicks = 0;
+            }
 
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            x++;
-            y = 0;
+            countcomp++;
+            countflash = 0;
             timer2.Start();
-            
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            timer1.Start();
             
         }
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            if (y == 0)
+            if (countflash == 0)
             {
-                PictureBoxArr[order[x]].Visible = false;
+                PictureBoxArr[order[countcomp]].Visible = false;
             }
 
-            else if (y==1)
+            else if (countflash == 1)
             {
-                PictureBoxArr[order[x]].Visible = true;
+                PictureBoxArr[order[countcomp]].Visible = true;
             }
 
             else
             {
-                if (x >= count)
+                if ((countcomp + 1) >= countlevel)
                 {
                     timer1.Stop();
                 }
                 timer2.Stop();
 
             }
-            y++;
+            countflash++;
+        }
+
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+            if (countflash == 0)
+            {
+                PictureBoxArr[k].Visible = false;
+            }
+
+            else if (countflash == 1)
+            {
+                PictureBoxArr[k].Visible = true;
+            }
+
+            else
+            {
+                
+                timer3.Stop();
+
+            }
+            countflash++;
         }
     }
+    
 }
