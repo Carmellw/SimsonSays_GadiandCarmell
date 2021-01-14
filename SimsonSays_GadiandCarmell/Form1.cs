@@ -15,8 +15,8 @@ namespace SimsonSays_GadiandCarmell
     {
         private PictureBox[] PictureBoxArr = new PictureBox[4];
         Random rnd = new Random();
-        private int[] order = new int[10];
-        private int countlevel = 4;
+        private int[] order = new int[5];
+        private int countlevel = 1;
         private int countcomp = -1;
         private int countflash = 0;
         private int countclicks = 0;
@@ -63,18 +63,35 @@ namespace SimsonSays_GadiandCarmell
             countflash = 0;
             timer3.Start();
 
-            if (countclicks<=countlevel)
+            
+            if (k != order[countclicks-1])
             {
-                if (k != order[countclicks])
-                {
-                    iswrong = true;
-                    MessageBox.Show("אתה כשלון");
-                }
+                iswrong = true;
+                MessageBox.Show("אתה כשלון");
+                SetArr();
+                countclicks = 0;
+                countcomp = -1;
+                countlevel = 1;
             }
 
-            else
+               
+
+            if (countclicks == countlevel)
             {
                 countclicks = 0;
+                countcomp = -1;
+                if (countlevel == order.Length)
+                {
+                    MessageBox.Show("לך לגד");
+                    countlevel = 1;
+                    SetArr();
+                }
+                else
+                {
+                    timer1.Start();
+                    countlevel++;
+                }
+
             }
 
         }
