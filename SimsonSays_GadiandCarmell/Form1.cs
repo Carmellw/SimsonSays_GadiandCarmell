@@ -82,7 +82,7 @@ namespace SimsonSays_GadiandCarmell
                 countcomp = -1;
                 if (countlevel == order.Length)
                 {
-                    MessageBox.Show("לך לגד");
+                    MessageBox.Show("אתה כשלון אבל ניצחת");
                     countlevel = 1;
                     SetArr();
                 }
