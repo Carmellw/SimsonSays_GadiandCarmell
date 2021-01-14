@@ -66,7 +66,7 @@ namespace SimsonSays_GadiandCarmell
             if (k != order[countclicks-1])
             {
                 iswrong = true;
-                MessageBox.Show("אתה כשלון");
+                MessageBox.Show("אתה כישלון");
                 SetArr();
                 countclicks = 0;
                 countcomp = -1;
@@ -81,7 +81,7 @@ namespace SimsonSays_GadiandCarmell
                 countcomp = -1;
                 if (countlevel == order.Length)
                 {
-                    MessageBox.Show("אתה כשלון אבל ניצחת");
+                    MessageBox.Show("אתה כישלון אבל ניצחת");
                     countlevel = 1;
                     SetArr();
                 }
