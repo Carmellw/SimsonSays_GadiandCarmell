@@ -15,7 +15,7 @@ namespace SimsonSays_GadiandCarmell
     {
         private PictureBox[] PictureBoxArr = new PictureBox[4];
         Random rnd = new Random();
-        private int[] order = new int[5];
+        private int[] order = new int[10];
         private int countlevel = 1;
         private int countcomp = -1;
         private int countflash = 0;
@@ -48,7 +48,6 @@ namespace SimsonSays_GadiandCarmell
             countcomp = -1;
             timer1.Start();
         }
-
 
         private void pictureBox_Click(object sender, EventArgs e)
         {
