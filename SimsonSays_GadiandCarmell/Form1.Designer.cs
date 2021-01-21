@@ -50,7 +50,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(300, 322);
+            this.button1.Location = new System.Drawing.Point(303, 189);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(105, 40);
             this.button1.TabIndex = 5;
@@ -67,6 +67,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Visible = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox_Click);
             // 
             // pictureBox3
@@ -78,6 +79,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Visible = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox_Click);
             // 
             // pictureBox1
@@ -89,6 +91,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox_Click);
             // 
             // pictureBox0
@@ -100,6 +103,7 @@
             this.pictureBox0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox0.TabIndex = 0;
             this.pictureBox0.TabStop = false;
+            this.pictureBox0.Visible = false;
             this.pictureBox0.Click += new System.EventHandler(this.pictureBox_Click);
             // 
             // timer2
