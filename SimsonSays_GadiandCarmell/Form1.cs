@@ -43,13 +43,15 @@ namespace SimsonSays_GadiandCarmell
             }
         }
 
-        // כאשר השחקן לוחץ על התחל מתחילים את טיימר 1 ומאתחלים את כל הערכים וחושפים את התמונות
+        // כאשר השחקן לוחץ על התחל מתחילים את טיימר 1 ומאתחלים את כל הערכים חושפים את התמונות ומעלים את הכפתור של ההתחלה
         private void Start_Click(object sender, EventArgs e)
         {
             PictureBoxArr[0].Visible = true;
             PictureBoxArr[1].Visible = true;
             PictureBoxArr[2].Visible = true;
             PictureBoxArr[3].Visible = true;
+            button1.Visible = false;
+
             SetArr();
             countclicks = 0;
             countcomp = -1;
@@ -76,16 +78,18 @@ namespace SimsonSays_GadiandCarmell
             // בודקים אם השחקן טעה
             if (k != order[countclicks-1])
             {
-                // מציג הודעה ומעלים את התמונות
+                // מציג הודעה ומעלים את התמונות ומחזיר את הכפתור של ההתחלה
                 MessageBox.Show("אתה כישלון");
                 PictureBoxArr[0].Visible = false;
                 PictureBoxArr[1].Visible = false;
                 PictureBoxArr[2].Visible = false;
                 PictureBoxArr[3].Visible = false;
+                button1.Visible = true;
+
 
             }
 
-               
+
             // בודק אם השחקן סיים את השלב
             if (countclicks == countlevel)
             {
@@ -97,12 +101,14 @@ namespace SimsonSays_GadiandCarmell
                 //כן
                 if (countlevel == order.Length)
                 {
-                    //מציג הודעה ומעלים את התמונות
+                    //מציג הודעה מעלים את התמונות ומחזיר את הכפתור של ההתחלה
                     MessageBox.Show("אתה כישלון אבל ניצחת");
                     PictureBoxArr[0].Visible = false;
                     PictureBoxArr[1].Visible = false;
                     PictureBoxArr[2].Visible = false;
                     PictureBoxArr[3].Visible = false;
+                    button1.Visible = true;
+
                 }
 
                 //לא

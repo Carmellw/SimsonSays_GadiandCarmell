@@ -59,18 +59,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -81,10 +81,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Properties\simon photos\button-blue.png" />
-    <Content Include="Properties\simon photos\button-green.png" />
-    <Content Include="Properties\simon photos\button-red.png" />
-    <Content Include="Properties\simon photos\button-yellow.png" />
+    <Content Include="Properties\simon photos\blue.jpg" />
+    <Content Include="Properties\simon photos\green.jpg" />
+    <Content Include="Properties\simon photos\katz_imah_shma.png" />
+    <Content Include="Properties\simon photos\red.jpg" />
+    <Content Include="Properties\simon photos\WhatsApp Image 2021-01-21 at 16.57.28.jpeg" />
+    <Content Include="Properties\simon photos\yellow.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

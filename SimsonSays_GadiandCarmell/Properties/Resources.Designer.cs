@@ -63,9 +63,9 @@ namespace SimsonSays_GadiandCarmell.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap button_blue {
+        internal static System.Drawing.Bitmap blue {
             get {
-                object obj = ResourceManager.GetObject("button_blue", resourceCulture);
+                object obj = ResourceManager.GetObject("blue", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace SimsonSays_GadiandCarmell.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap button_green {
+        internal static System.Drawing.Bitmap green {
             get {
-                object obj = ResourceManager.GetObject("button_green", resourceCulture);
+                object obj = ResourceManager.GetObject("green", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace SimsonSays_GadiandCarmell.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap button_red {
+        internal static System.Drawing.Bitmap katz_imah_shma {
             get {
-                object obj = ResourceManager.GetObject("button_red", resourceCulture);
+                object obj = ResourceManager.GetObject("katz_imah_shma", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,29 @@ namespace SimsonSays_GadiandCarmell.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap button_yellow {
+        internal static System.Drawing.Bitmap red {
             get {
-                object obj = ResourceManager.GetObject("button_yellow", resourceCulture);
+                object obj = ResourceManager.GetObject("red", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2021_01_21_at_16_57_28 {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp_Image_2021_01_21_at_16_57_28", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap yellow {
+            get {
+                object obj = ResourceManager.GetObject("yellow", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
